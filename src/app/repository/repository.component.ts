@@ -1,15 +1,33 @@
 import { Component, OnInit } from '@angular/core';
+import  { UsersComponent } from '../users/users.component';
+import { Repository } from '../repository';
 
 @Component({
-  selector: 'app-repository',
-  templateUrl: './repository.component.html',
-  styleUrls: ['./repository.component.css']
+  selector: 'app-repositories',
+  templateUrl: './repositories.component.html',
+  styleUrls: ['./repositories.component.css']
 })
-export class RepositoryComponent implements OnInit {
+export class RepositoriesComponent implements OnInit {
 
-  constructor() { }
+  repo: Repository;
 
-  ngOnInit(): void {
+  constructor(public repoService: UsersComponent) { }
+
+  repoSearch(searchName){
+    this.repoService.getReopos(searchName).then(
+      (results)=>{
+        this.repo =this.repoService.allRepos
+        console.log(this.repo);
+      },
+      (error)=>{
+        console.log(error);
+      }
+    );
+  }
+
+  ngOnInit() {
+    this.repoSearch('carol-wambui');
   }
 
 }
+

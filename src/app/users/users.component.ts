@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
+  getReopos(searchName: any) {
+    throw new Error("Method not implemented.");
+  }
+  allRepos: any;
 
   constructor() { }
 
