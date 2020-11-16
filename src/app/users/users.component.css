@@ -52,3 +52,18 @@ img{
     float: right;
     margin-right: 14%;
   }
+  .cashy {
+    margin: auto auto auto auto;
+    padding: 20px;
+    display: grid;
+    width:100% ;
+    grid-template-columns: 400px 400px;
+  }
+  .cashy .card{
+    max-width: 280px;
+    max-height: 500px;
+  }
+  .card-body .jumbotron{
+    background-color: rgba(18, 22,25,0.8);
+    color: #fff;
+  }

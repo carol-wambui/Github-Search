@@ -12,7 +12,7 @@ export class SearchFormComponent implements OnInit {
 
   search(){
     this.searchOutput.emit(this.searchName);
-    this.searchName = "";
+    // this.searchName = "";
   }
 
   constructor() { }
